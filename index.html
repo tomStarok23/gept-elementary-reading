@@ -134,7 +134,7 @@
   <div id="toast-container" class="no-print fixed bottom-5 right-5 z-50 flex flex-col gap-2 max-w-sm pointer-events-none"></div>
 
   <!-- Custom Modal Dialog (Replaces alert / confirm) -->
-  <div id="custom-modal" class="no-print hidden fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-xs p-4">
+  <div id="custom-modal" class="no-print hidden fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4">
     <div class="bg-white rounded-2xl shadow-2xl border border-slate-200 max-w-md w-full p-6 transform transition-all">
       <div class="flex items-start gap-3">
         <div id="modal-icon" class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center shrink-0">
@@ -147,17 +147,17 @@
       </div>
       <div id="modal-actions" class="mt-6 flex items-center justify-end gap-2.5">
         <button id="modal-cancel-btn" class="px-4 py-2 text-sm font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition">Cancel</button>
-        <button id="modal-confirm-btn" class="px-4 py-2 text-sm font-semibold text-white bg-lttc-800 hover:bg-lttc-900 rounded-xl shadow-xs transition">Confirm</button>
+        <button id="modal-confirm-btn" class="px-4 py-2 text-sm font-semibold text-white bg-lttc-800 hover:bg-lttc-900 rounded-xl shadow-sm transition">Confirm</button>
       </div>
     </div>
   </div>
 
   <!-- AI Exam Generator Modal -->
-  <div id="ai-modal" class="no-print hidden fixed inset-0 z-50 flex items-center justify-center bg-slate-900/65 backdrop-blur-xs p-4 overflow-y-auto">
+  <div id="ai-modal" class="no-print hidden fixed inset-0 z-50 flex items-center justify-center bg-slate-900/65 backdrop-blur-sm p-4 overflow-y-auto">
     <div class="bg-white rounded-2xl shadow-2xl border border-slate-200 max-w-lg w-full p-6 my-8">
       <div class="flex items-center justify-between pb-4 border-b border-slate-100">
         <div class="flex items-center gap-2.5">
-          <div class="w-9 h-9 rounded-xl bg-indigo-600 text-white flex items-center justify-center shadow-xs">
+          <div class="w-9 h-9 rounded-xl bg-indigo-600 text-white flex items-center justify-center shadow-sm">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
           </div>
           <div>
@@ -211,7 +211,7 @@
 
       <div class="mt-6 flex items-center justify-end gap-2.5 pt-3 border-t border-slate-100">
         <button id="ai-cancel-btn" onclick="closeAiModal()" class="px-4 py-2 text-sm font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition">Cancel</button>
-        <button id="ai-generate-btn" onclick="generateAiExam()" class="px-4 py-2.5 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl shadow-xs flex items-center gap-2 transition">
+        <button id="ai-generate-btn" onclick="generateAiExam()" class="px-4 py-2.5 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl shadow-sm flex items-center gap-2 transition">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
           <span>Generate 35-Question Exam</span>
         </button>
@@ -253,7 +253,7 @@
           </div>
 
           <!-- Submit / Status Button -->
-          <button id="header-submit-btn" onclick="promptSubmitExam()" class="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold shadow-xs transition flex items-center gap-1.5">
+          <button id="header-submit-btn" onclick="promptSubmitExam()" class="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold shadow-sm transition flex items-center gap-1.5">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
             <span>Submit (交卷)</span>
           </button>
@@ -273,12 +273,12 @@
             <option value="RANDOM">Randomized New Form (動態隨機組卷)</option>
           </select>
 
-          <button onclick="generateRandomExam(true)" class="px-2.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold flex items-center gap-1 transition shadow-xs" title="Assemble a brand-new 35-item test from the expanded A2 bank with shuffled choices">
+          <button onclick="generateRandomExam(true)" class="px-2.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold flex items-center gap-1 transition shadow-sm" title="Assemble a brand-new 35-item test from the expanded A2 bank with shuffled choices">
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
             <span>Generate Random Test</span>
           </button>
 
-          <button onclick="openAiModal()" class="px-2.5 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-semibold flex items-center gap-1 transition shadow-xs" title="Generate an infinite variety of fresh GEPT Elementary exams using Gemini AI">
+          <button onclick="openAiModal()" class="px-2.5 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-semibold flex items-center gap-1 transition shadow-sm" title="Generate an infinite variety of fresh GEPT Elementary exams using Gemini AI">
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
             <span>AI Generate Exam</span>
           </button>
@@ -287,18 +287,18 @@
         <!-- Right: Direct 1-Click PDF Downloads, Mode Switcher & Export -->
         <div class="flex flex-wrap items-center gap-1.5">
           <!-- Direct 1-Click PDF Download Buttons -->
-          <button onclick="downloadExamPdf('test')" class="px-2.5 py-1.5 rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold flex items-center gap-1 shadow-xs transition" title="Directly generate and download an A4 Test Booklet PDF">
+          <button onclick="downloadExamPdf('test')" class="px-2.5 py-1.5 rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold flex items-center gap-1 shadow-sm transition" title="Directly generate and download an A4 Test Booklet PDF">
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
             <span>Download Test PDF</span>
           </button>
 
-          <button onclick="downloadExamPdf('key')" class="px-2.5 py-1.5 rounded-lg bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold flex items-center gap-1 shadow-xs transition" title="Directly generate and download an A4 Answer Key & Bilingual Explanations PDF">
+          <button onclick="downloadExamPdf('key')" class="px-2.5 py-1.5 rounded-lg bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold flex items-center gap-1 shadow-sm transition" title="Directly generate and download an A4 Answer Key & Bilingual Explanations PDF">
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
             <span>Download Answer Key PDF</span>
           </button>
 
           <div class="inline-flex rounded-lg bg-lttc-800 p-0.5 border border-white/15">
-            <button id="mode-timed-btn" onclick="setMode('timed')" class="px-2.5 py-1 rounded-md text-xs font-semibold bg-white text-lttc-900 shadow-xs transition">Timed (35:00)</button>
+            <button id="mode-timed-btn" onclick="setMode('timed')" class="px-2.5 py-1 rounded-md text-xs font-semibold bg-white text-lttc-900 shadow-sm transition">Timed (35:00)</button>
             <button id="mode-practice-btn" onclick="setMode('practice')" class="px-2.5 py-1 rounded-md text-xs font-medium text-slate-300 hover:text-white transition">Untimed Practice</button>
             <button id="mode-print-btn" onclick="setMode('print')" class="px-2.5 py-1 rounded-md text-xs font-medium text-slate-300 hover:text-white transition">Teacher Print View</button>
           </div>
@@ -334,6 +334,10 @@
                 <span>📂</span> Load Exam Form (JSON)
                 <input type="file" accept=".json" onchange="importJSON(event); toggleExportMenu();" class="hidden" />
               </label>
+              <div class="my-1 border-t border-slate-100"></div>
+              <button onclick="copyFullHtmlSource(); toggleExportMenu();" class="w-full text-left px-3.5 py-2 text-xs hover:bg-slate-100 flex items-center gap-2 font-semibold text-indigo-700">
+                <span>📋</span> Copy App HTML Code (index.html)
+              </button>
             </div>
           </div>
         </div>
@@ -353,7 +357,7 @@
           <input id="toggle-print-key" type="checkbox" checked onchange="renderAll()" class="rounded text-blue-600 focus:ring-0" />
           <span>Show Answer Key & Bilingual Explanations</span>
         </label>
-        <button onclick="window.print()" class="px-4 py-1.5 rounded-lg bg-lttc-800 hover:bg-lttc-900 text-white text-xs font-semibold shadow-xs transition">
+        <button onclick="window.print()" class="px-4 py-1.5 rounded-lg bg-lttc-800 hover:bg-lttc-900 text-white text-xs font-semibold shadow-sm transition">
           🖨️ Print / Save PDF Now
         </button>
         <button onclick="setMode('timed')" class="px-3 py-1.5 rounded-lg bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 text-xs font-medium transition">
@@ -492,7 +496,7 @@
       <div id="exam-paper-column" class="w-full lg:flex-1 min-w-0">
 
         <!-- Exam Booklet Cover / Header Box -->
-        <div class="bg-white rounded-2xl shadow-xs border border-slate-200 p-5 sm:p-6 mb-6">
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 sm:p-6 mb-6">
           <div class="flex flex-wrap items-start justify-between gap-4 pb-4 border-b-2 border-slate-800">
             <div>
               <div class="text-xs font-bold uppercase tracking-widest text-lttc-700">General English Proficiency Test • Elementary Level (CEFR A2)</div>
@@ -540,7 +544,7 @@
         <div id="teacher-print-key-root" class="hidden mt-8"></div>
 
         <!-- Bottom Submit Bar -->
-        <div id="bottom-submit-bar" class="no-print mt-8 bg-white rounded-2xl border border-slate-200 shadow-xs p-5 flex flex-wrap items-center justify-between gap-4">
+        <div id="bottom-submit-bar" class="no-print mt-8 bg-white rounded-2xl border border-slate-200 shadow-sm p-5 flex flex-wrap items-center justify-between gap-4">
           <div>
             <p class="text-sm font-bold text-slate-900">End of Reading Test (閱讀測驗結束)</p>
             <p id="bottom-progress-text" class="text-xs text-slate-500 mt-0.5">You have answered 0 of 35 questions.</p>
@@ -584,7 +588,7 @@
             <button onclick="jumpToNextUnanswered()" class="w-full py-2 px-3 rounded-xl bg-white hover:bg-slate-100 border border-slate-300 text-xs font-semibold text-slate-700 transition">
               Jump to Next Unanswered (跳至未作答題)
             </button>
-            <button id="omr-submit-btn" onclick="promptSubmitExam()" class="w-full py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-xs transition">
+            <button id="omr-submit-btn" onclick="promptSubmitExam()" class="w-full py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-sm transition">
               Submit Exam (完成並交卷)
             </button>
           </div>
@@ -2205,10 +2209,26 @@
       return lookup[clamped];
     }
 
+    // Deterministic PRNG seeded by Form ID so pre-built Forms A–D have balanced A/B/C/D keys
+    // while remaining 100% reproducible across Test PDF and Answer Key PDF exports
+    function createSeededRng(seedStr) {
+      let h = 2166136261 >>> 0;
+      for (let i = 0; i < seedStr.length; i++) {
+        h ^= seedStr.charCodeAt(i);
+        h = Math.imul(h, 16777619);
+      }
+      return function() {
+        h += 0x6D2B79F5;
+        let t = Math.imul(h ^ (h >>> 15), 1 | h);
+        t ^= t + Math.imul(t ^ (t >>> 7), 61 | t);
+        return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+      };
+    }
+
     // Utility: Shuffle array & track new answer index
-    function shuffleOptionsWithAnswer(options, answerIndex) {
-      // Do not shuffle if options represent ascending numbers/times or "All classes cost the same"
-      const keepOrderKeywords = ['All classes cost the same', 'Both', 'Neither'];
+    function shuffleOptionsWithAnswer(options, answerIndex, rngFn = Math.random) {
+      // Do not shuffle if options represent special inclusive/exclusive summaries
+      const keepOrderKeywords = ['All three take the exact same time', 'All three classes', 'Both', 'Neither'];
       const hasSpecial = options.some(opt => keepOrderKeywords.some(k => opt.includes(k)));
       if (hasSpecial) {
         return { options: [...options], answerIndex };
@@ -2220,7 +2240,7 @@
       }));
 
       for (let i = paired.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
+        const j = Math.floor(rngFn() * (i + 1));
         [paired[i], paired[j]] = [paired[j], paired[i]];
       }
 
@@ -2241,7 +2261,7 @@
     }
 
     // =========================================================================
-    // 3. EXAM FORM BUILDERS (Pre-built A/B/C & Randomized Assembler)
+    // 3. EXAM FORM BUILDERS (Pre-built A/B/C/D & Randomized Assembler)
     // =========================================================================
 
     function buildPrebuiltForm(formKey) {
@@ -2284,7 +2304,7 @@
         part1Items: p1Slice,
         part2Passages: p2Indices.map(i => PART2_BANK[i]),
         part3Passages: p3Indices.map(i => PART3_BANK[i]),
-        shuffleChoices: false
+        shuffleChoices: 'deterministic'
       });
     }
 
@@ -2332,12 +2352,14 @@
     // Normalizes any raw exam ingredients into the canonical 1..35 structure
     function assembleNormalizedExam({ formId, title, subtitle, part1Items, part2Passages, part3Passages, shuffleChoices = false }) {
       const questionsMap = {}; // qNum (1..35) -> question object
+      const rngFn = shuffleChoices === 'deterministic' ? createSeededRng(formId) : Math.random;
+      const shouldShuffle = Boolean(shuffleChoices);
 
       // 1. Part 1: Q1 - Q15
       const part1 = part1Items.slice(0, 15).map((item, idx) => {
         const qNum = idx + 1;
-        const processed = shuffleChoices
-          ? shuffleOptionsWithAnswer(item.options, item.answerIndex)
+        const processed = shouldShuffle
+          ? shuffleOptionsWithAnswer(item.options, item.answerIndex, rngFn)
           : { options: [...item.options], answerIndex: item.answerIndex };
 
         const qObj = {
@@ -2360,8 +2382,8 @@
         const startQ = currentQ;
         const passageItems = passage.items.slice(0, 5).map((item) => {
           const qNum = currentQ++;
-          const processed = shuffleChoices
-            ? shuffleOptionsWithAnswer(item.options, item.answerIndex)
+          const processed = shouldShuffle
+            ? shuffleOptionsWithAnswer(item.options, item.answerIndex, rngFn)
             : { options: [...item.options], answerIndex: item.answerIndex };
 
           const qObj = {
@@ -2403,8 +2425,8 @@
         const pQuestions = passage.questions.map((item) => {
           if (currentQ > 35) return null;
           const qNum = currentQ++;
-          const processed = shuffleChoices
-            ? shuffleOptionsWithAnswer(item.options, item.answerIndex)
+          const processed = shouldShuffle
+            ? shuffleOptionsWithAnswer(item.options, item.answerIndex, rngFn)
             : { options: [...item.options], answerIndex: item.answerIndex };
 
           const qObj = {
@@ -2426,7 +2448,7 @@
           title: passage.title,
           genre: passage.genre || 'Reading Passage',
           layoutType: passage.layoutType || 'article',
-          content: passage.content,
+          content: sanitizePassageHtml(passage.content),
           startQ,
           endQ: currentQ - 1,
           questions: pQuestions
@@ -2679,7 +2701,7 @@ Make the passages culturally relatable to everyday life in Taiwan (school, MRT/t
             layoutType: ['notice', 'schedule', 'email', 'ad', 'article'].includes(srcPassage.layoutType)
               ? srcPassage.layoutType
               : 'article',
-            content: (srcPassage.content || PART3_BANK[idx].content).replace(/\n/g, '<br/>'),
+            content: sanitizePassageHtml((srcPassage.content || PART3_BANK[idx].content).replace(/\n/g, '<br/>')),
             questions: qs.slice(0, needed).map(q => ({
               ...q,
               options: (q.options || ['A', 'B', 'C', 'D']).slice(0, 4),
@@ -2774,7 +2796,7 @@ Make the passages culturally relatable to everyday life in Taiwan (school, MRT/t
       const practiceBtn = document.getElementById('mode-practice-btn');
       const printBtn = document.getElementById('mode-print-btn');
 
-      const activeClass = 'px-2.5 py-1 rounded-md text-xs font-semibold bg-white text-lttc-900 shadow-xs transition';
+      const activeClass = 'px-2.5 py-1 rounded-md text-xs font-semibold bg-white text-lttc-900 shadow-sm transition';
       const inactiveClass = 'px-2.5 py-1 rounded-md text-xs font-medium text-slate-300 hover:text-white transition';
 
       timedBtn.className = newMode === 'timed' ? activeClass : inactiveClass;
@@ -2951,9 +2973,10 @@ Make the passages culturally relatable to everyday life in Taiwan (school, MRT/t
       const isPrint = STATE.mode === 'print';
 
       // --- PART 1 ---
+      const p1Cards = exam.part1.map(q => buildQuestionCardHtml(q)).join('');
       const p1Html = `
         <section class="space-y-3">
-          <div class="bg-lttc-900 text-white rounded-2xl px-5 py-3.5 shadow-xs">
+          <div class="bg-lttc-900 text-white rounded-2xl px-5 py-3.5 shadow-sm">
             <div class="flex flex-wrap items-center justify-between gap-2">
               <h3 class="text-sm sm:text-base font-bold">第一部分：詞彙和結構 Part 1: Sentence Completion (Questions 1–15)</h3>
               <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-white/15 text-amber-300">15 Questions</span>
@@ -2961,7 +2984,7 @@ Make the passages culturally relatable to everyday life in Taiwan (school, MRT/t
             <p class="text-xs text-slate-300 mt-1">說明：本部分共 15 題，每題有一個空格。請就四個選項中選出最適合填入空格的字或詞。</p>
           </div>
           <div id="part1-questions-list" class="space-y-3">
-            ${exam.part1.map(q => buildQuestionCardHtml(q)).join('')}
+            ${p1Cards || '<div class="rounded-xl border border-slate-200 bg-white p-4 text-xs text-slate-500">No items in Part 1 match the active review filter.</div>'}
           </div>
         </section>
       `;
@@ -2969,7 +2992,7 @@ Make the passages culturally relatable to everyday life in Taiwan (school, MRT/t
       // --- PART 2 ---
       const p2Html = `
         <section class="space-y-5">
-          <div class="bg-lttc-900 text-white rounded-2xl px-5 py-3.5 shadow-xs">
+          <div class="bg-lttc-900 text-white rounded-2xl px-5 py-3.5 shadow-sm">
             <div class="flex flex-wrap items-center justify-between gap-2">
               <h3 class="text-sm sm:text-base font-bold">第二部分：段落填空 Part 2: Cloze (Questions 16–25)</h3>
               <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-white/15 text-amber-300">2 Passages • 10 Questions</span>
@@ -2990,9 +3013,10 @@ Make the passages culturally relatable to everyday life in Taiwan (school, MRT/t
               return `<button type="button" id="cloze-blank-${num}" onclick="scrollToQuestion(${num})" class="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md border font-mono text-xs sm:text-sm font-bold transition cursor-pointer ${styleClass}">${label}</button>`;
             });
 
+            const passageCards = passage.items.map(q => buildQuestionCardHtml(q)).join('');
             return `
               <div class="space-y-3">
-                <div class="passage-card bg-white rounded-2xl border-2 border-slate-300 shadow-xs p-5">
+                <div class="passage-card bg-white rounded-2xl border-2 border-slate-300 shadow-sm p-5">
                   <div class="flex flex-wrap items-center justify-between gap-2 pb-2.5 mb-3 border-b border-slate-200">
                     <span class="text-xs font-extrabold uppercase tracking-wider text-lttc-700">Cloze Passage ${idx + 1} (Questions ${passage.startQ}–${passage.endQ})</span>
                     <span class="text-xs font-medium px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-600">${escapeHtml(passage.topic)}</span>
@@ -3001,7 +3025,7 @@ Make the passages culturally relatable to everyday life in Taiwan (school, MRT/t
                   <p class="exam-passage-text text-sm sm:text-[15.5px] text-slate-800">${renderedPassageText}</p>
                 </div>
                 <div class="space-y-2.5">
-                  ${passage.items.map(q => buildQuestionCardHtml(q)).join('')}
+                  ${passageCards || '<div class="rounded-xl border border-slate-200 bg-white p-3.5 text-xs text-slate-500">No items in this passage match the active review filter.</div>'}
                 </div>
               </div>
             `;
@@ -3012,7 +3036,7 @@ Make the passages culturally relatable to everyday life in Taiwan (school, MRT/t
       // --- PART 3 ---
       const p3Html = `
         <section class="space-y-5">
-          <div class="bg-lttc-900 text-white rounded-2xl px-5 py-3.5 shadow-xs">
+          <div class="bg-lttc-900 text-white rounded-2xl px-5 py-3.5 shadow-sm">
             <div class="flex flex-wrap items-center justify-between gap-2">
               <h3 class="text-sm sm:text-base font-bold">第三部分：閱讀理解 Part 3: Reading Comprehension (Questions 26–35)</h3>
               <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-white/15 text-amber-300">${exam.part3.length} Passages • 10 Questions</span>
@@ -3027,18 +3051,19 @@ Make the passages culturally relatable to everyday life in Taiwan (school, MRT/t
                 ? 'bg-sky-50/40 border-sky-300'
                 : 'bg-white border-slate-300';
 
+            const passageCards = passage.questions.map(q => buildQuestionCardHtml(q)).join('');
             return `
               <div class="space-y-3">
-                <div class="passage-card rounded-2xl border-2 ${cardBg} shadow-xs p-5">
+                <div class="passage-card rounded-2xl border-2 ${cardBg} shadow-sm p-5">
                   <div class="flex flex-wrap items-center justify-between gap-2 pb-2.5 mb-3 border-b border-slate-200">
                     <span class="text-xs font-extrabold uppercase tracking-wider text-lttc-700">Reading Text ${idx + 1} (Questions ${passage.startQ}–${passage.endQ})</span>
                     <span class="text-xs font-medium px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700">${escapeHtml(passage.genre)}</span>
                   </div>
                   <h4 class="text-base font-bold text-slate-900 mb-2.5">${escapeHtml(passage.title)}</h4>
-                  <div class="exam-passage-text text-sm sm:text-[15px] text-slate-800">${passage.content}</div>
+                  <div class="exam-passage-text text-sm sm:text-[15px] text-slate-800">${sanitizePassageHtml(passage.content)}</div>
                 </div>
                 <div class="space-y-2.5">
-                  ${passage.questions.map(q => buildQuestionCardHtml(q)).join('')}
+                  ${passageCards || '<div class="rounded-xl border border-slate-200 bg-white p-3.5 text-xs text-slate-500">No items in this passage match the active review filter.</div>'}
                 </div>
               </div>
             `;
@@ -3132,7 +3157,7 @@ Make the passages culturally relatable to everyday life in Taiwan (school, MRT/t
       ` : '';
 
       return `
-        <div id="q-card-${q.qNum}" class="exam-card rounded-2xl border p-4 sm:p-5 shadow-2xs transition ${cardBorder}">
+        <div id="q-card-${q.qNum}" class="exam-card rounded-2xl border p-4 sm:p-5 shadow-sm transition ${cardBorder}">
           <div class="flex items-start justify-between gap-3">
             <div class="flex items-start gap-2.5">
               <span class="inline-flex items-center justify-center min-w-7 h-7 px-2 rounded-lg bg-slate-800 text-white font-mono text-xs font-bold shrink-0 mt-0.5">${q.qNum}</span>
@@ -3483,6 +3508,12 @@ Make the passages culturally relatable to everyday life in Taiwan (school, MRT/t
 
       return `
         <div style="font-family: 'Inter', 'Noto Sans TC', Arial, sans-serif; color: #000000; background: #ffffff; padding: 4px;">
+          <style>
+            .pdf-sheet table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 9.5pt; }
+            .pdf-sheet th, .pdf-sheet td { border: 1px solid #64748b; padding: 5px 8px; text-align: left; }
+            .pdf-sheet th { background-color: #f1f5f9; font-weight: 700; }
+          </style>
+          <div class="pdf-sheet">
           <!-- Official Header Box -->
           <div class="pdf-avoid-break" style="border: 2px solid #000000; border-radius: 6px; padding: 12px 16px; margin-bottom: 14px;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1.5px solid #000000; padding-bottom: 8px;">
@@ -3530,6 +3561,7 @@ Make the passages culturally relatable to everyday life in Taiwan (school, MRT/t
 
           <div style="text-align: center; font-size: 9pt; font-weight: 700; color: #475569; margin-top: 12px; padding-top: 8px; border-top: 1px solid #cbd5e1;">
             — End of GEPT Elementary Reading Test (${escapeHtml(exam.formId)}) —
+          </div>
           </div>
         </div>
       `;
@@ -3598,6 +3630,26 @@ Make the passages culturally relatable to everyday life in Taiwan (school, MRT/t
         .replace(/"/g, '&quot;');
     }
 
+    // Allows safe structural HTML formatting in Part 3 passages while stripping active scripts/handlers
+    function sanitizePassageHtml(html) {
+      const template = document.createElement('template');
+      template.innerHTML = String(html ?? '');
+      const forbiddenTags = ['SCRIPT', 'IFRAME', 'OBJECT', 'EMBED', 'LINK', 'STYLE', 'FORM', 'INPUT'];
+      forbiddenTags.forEach(tag => {
+        template.content.querySelectorAll(tag.toLowerCase()).forEach(el => el.remove());
+      });
+      template.content.querySelectorAll('*').forEach(el => {
+        Array.from(el.attributes).forEach(attr => {
+          const name = attr.name.toLowerCase();
+          const val = attr.value.trim().toLowerCase();
+          if (name.startsWith('on') || val.startsWith('javascript:')) {
+            el.removeAttribute(attr.name);
+          }
+        });
+      });
+      return template.innerHTML;
+    }
+
     async function downloadExamPdf(type = 'test') {
       if (!STATE.currentExam) return;
       const isAnswerKey = type === 'key';
@@ -3614,28 +3666,35 @@ Make the passages culturally relatable to everyday life in Taiwan (school, MRT/t
       }
 
       const student = getStudentInfo();
-      const spinnerToast = showPersistentSpinnerToast(
-        isAnswerKey ? 'Generating A4 Answer Key PDF...' : 'Generating A4 Test Booklet PDF...'
-      );
 
-      // Build off-screen A4 render container (visible to html2canvas, outside viewport)
-      const wrapper = document.createElement('div');
-      wrapper.style.position = 'fixed';
-      wrapper.style.left = '-12000px';
-      wrapper.style.top = '0';
-      wrapper.style.width = '760px';
-      wrapper.style.background = '#ffffff';
-      wrapper.style.color = '#000000';
-      wrapper.style.zIndex = '-1';
-      wrapper.innerHTML = isAnswerKey
+      // Render inside an in-viewport overlay modal so html2canvas never clips or outputs blank pages when scrolled
+      const overlay = document.createElement('div');
+      overlay.className = 'no-print';
+      overlay.style.cssText = 'position: fixed; inset: 0; z-index: 9999; background: rgba(15, 23, 42, 0.78); display: flex; flex-direction: column; align-items: center; overflow-y: auto; padding: 24px 12px;';
+
+      const statusBanner = document.createElement('div');
+      statusBanner.style.cssText = 'position: sticky; top: 0; z-index: 10; background: #0f172a; color: #ffffff; border: 1px solid #334155; border-radius: 12px; padding: 10px 18px; margin-bottom: 16px; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.35);';
+      statusBanner.innerHTML = `
+        <svg class="animate-spin h-4 w-4 text-amber-300 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        <span>${escapeHtml(isAnswerKey ? 'Rendering A4 Answer Key PDF...' : 'Rendering A4 Test Booklet PDF...')}</span>
+      `;
+
+      const paperSheet = document.createElement('div');
+      paperSheet.style.cssText = 'width: 750px; max-width: 750px; background: #ffffff; color: #000000; padding: 16px; border-radius: 4px; box-shadow: 0 20px 40px rgba(0,0,0,0.4);';
+      paperSheet.innerHTML = isAnswerKey
         ? buildAnswerKeyPdfHtml(STATE.currentExam, student)
         : buildTestBookletPdfHtml(STATE.currentExam, student);
 
-      document.body.appendChild(wrapper);
+      overlay.appendChild(statusBanner);
+      overlay.appendChild(paperSheet);
+      document.body.appendChild(overlay);
 
       try {
         // Allow browser layout engine to paint fonts & tables before capture
-        await new Promise(resolve => requestAnimationFrame(() => setTimeout(resolve, 180)));
+        await new Promise(resolve => requestAnimationFrame(() => setTimeout(resolve, 220)));
 
         const opt = {
           margin: [11, 11, 13, 11],
@@ -3645,7 +3704,13 @@ Make the passages culturally relatable to everyday life in Taiwan (school, MRT/t
             scale: 2,
             useCORS: true,
             backgroundColor: '#ffffff',
-            logging: false
+            scrollX: 0,
+            scrollY: 0,
+            logging: false,
+            onclone: (clonedDoc) => {
+              // Strip external font stylesheets in clone so html2canvas never stalls on cross-origin CSS
+              clonedDoc.querySelectorAll('link[rel="stylesheet"]').forEach(link => link.remove());
+            }
           },
           jsPDF: {
             unit: 'mm',
@@ -3658,14 +3723,84 @@ Make the passages culturally relatable to everyday life in Taiwan (school, MRT/t
           }
         };
 
-        await window.html2pdf().set(opt).from(wrapper).save();
-        showToast(`Downloaded ${fileName}`, 'success');
+        const pdf = await window.html2pdf().set(opt).from(paperSheet).toPdf().get('pdf');
+        const pdfBlob = pdf.output('blob');
+        const blobUrl = URL.createObjectURL(pdfBlob);
+
+        // Attempt direct file download
+        const dlLink = document.createElement('a');
+        dlLink.href = blobUrl;
+        dlLink.download = fileName;
+        document.body.appendChild(dlLink);
+        dlLink.click();
+        document.body.removeChild(dlLink);
+
+        showPdfReadyModal(fileName, blobUrl, isAnswerKey);
       } catch (err) {
         showToast(`PDF export encountered an error (${err.message}). Opening Print view fallback...`, 'warning');
         printExamPaper(isAnswerKey);
       } finally {
-        if (spinnerToast) spinnerToast.remove();
-        wrapper.remove();
+        overlay.remove();
+      }
+    }
+
+    function showPdfReadyModal(fileName, blobUrl, isAnswerKey) {
+      const modal = document.getElementById('custom-modal');
+      const titleEl = document.getElementById('modal-title');
+      const msgEl = document.getElementById('modal-message');
+      const actionsEl = document.getElementById('modal-actions');
+
+      titleEl.textContent = isAnswerKey ? 'Answer Key PDF Ready' : 'Exam Test PDF Ready';
+      msgEl.innerHTML = `Your A4 PDF (<strong>${escapeHtml(fileName)}</strong>) has been generated.<br/><span class="text-xs text-slate-500 mt-1 block">If your browser preview blocked the automatic download, click <strong>Open PDF in New Tab</strong> below to view and save it.</span>`;
+
+      actionsEl.innerHTML = `
+        <button id="pdf-modal-close" class="px-3.5 py-2 text-xs font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition">Close</button>
+        <a href="${blobUrl}" download="${escapeHtml(fileName)}" class="px-3.5 py-2 text-xs font-semibold text-slate-900 bg-amber-400 hover:bg-amber-300 rounded-xl shadow-sm transition">⬇ Save .PDF</a>
+        <a href="${blobUrl}" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 text-xs font-semibold text-white bg-lttc-800 hover:bg-lttc-900 rounded-xl shadow-sm transition">↗ Open PDF in New Tab</a>
+      `;
+
+      modal.classList.remove('hidden');
+
+      const restoreDefaultModal = () => {
+        modal.classList.add('hidden');
+        actionsEl.innerHTML = `
+          <button id="modal-cancel-btn" class="px-4 py-2 text-sm font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition">Cancel</button>
+          <button id="modal-confirm-btn" class="px-4 py-2 text-sm font-semibold text-white bg-lttc-800 hover:bg-lttc-900 rounded-xl shadow-sm transition">Confirm</button>
+        `;
+      };
+
+      document.getElementById('pdf-modal-close').onclick = restoreDefaultModal;
+    }
+
+    function copyFullHtmlSource() {
+      try {
+        const cloneDoc = document.documentElement.cloneNode(true);
+        const toastContainer = cloneDoc.querySelector('#toast-container');
+        if (toastContainer) toastContainer.innerHTML = '';
+        const exportMenu = cloneDoc.querySelector('#export-menu');
+        if (exportMenu) exportMenu.classList.add('hidden');
+        const examRoot = cloneDoc.querySelector('#exam-content-root');
+        if (examRoot) examRoot.innerHTML = '';
+        const omrBody = cloneDoc.querySelector('#omr-grid-body');
+        if (omrBody) omrBody.innerHTML = '';
+
+        const fullHtml = '<!DOCTYPE html>\n' + cloneDoc.outerHTML;
+        const ta = document.createElement('textarea');
+        ta.value = fullHtml;
+        ta.style.cssText = 'position:fixed;left:-9999px;top:0;';
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        const ok = document.execCommand('copy');
+        document.body.removeChild(ta);
+
+        if (ok) {
+          showToast('Copied complete index.html source code! Paste into Notepad/TextEdit and save as index.html.', 'success');
+        } else {
+          showToast('Please click the Code tab on the right, select all (Ctrl+A / Cmd+A), and copy.', 'warning');
+        }
+      } catch (err) {
+        showToast('Please click the Code tab on the right, select all (Ctrl+A / Cmd+A), and copy.', 'warning');
       }
     }
 
